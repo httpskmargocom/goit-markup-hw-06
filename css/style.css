@@ -481,9 +481,12 @@ img {
 }
 
 .footer-container {
+  max-width: 1158px; 
+  margin: 0 auto;    
   display: flex;
   align-items: baseline;
   gap: 120px;
+  padding: 0 15px; 
 }
 
 .footer-logo {
