@@ -233,6 +233,7 @@ header .logo {
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2000;
 }
 
 .mobile-menu.is-open {
@@ -330,6 +331,8 @@ header .logo {
 }
 .mobile-menu-social-icon {
   fill: #fff;
+  width: 24px;
+  height: 24px;
 }
 
 @media screen and (min-width: 768px) {
@@ -350,8 +353,7 @@ header .logo {
   background-size: cover;
   background-position: center center;
   background-color: #2e2f42;
-  width: 320px;
-  height: 432px;
+  max-width: 320px;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -375,10 +377,10 @@ header .logo {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   padding: 72px 0;
   box-sizing: border-box;
+  gap: 48px;
 }
 
 .introduction-title {
@@ -405,7 +407,7 @@ header .logo {
   border-radius: 4px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0, 15);
   display: block;
-  margin: 72px auto 0;
+  margin: 0;
   padding: 0;
   text-align: center;
   cursor: pointer;
@@ -421,14 +423,13 @@ header .logo {
 /* intro tablet */
 @media screen and (min-width: 768px) {
   .introduction.section {
-    width: 768px;
-    height: 436px;
+    max-width: 768px;
     background-image: linear-gradient(
         to bottom,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/introduction.jpg);
+      url(../images/tablet-intro.jpg);
   }
   .introduction .container {
     padding: 112px 0;
@@ -447,7 +448,7 @@ header .logo {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/introx2.jpg);
+      url(../images/tablet-introx2.jpg);
   }
 }
 
@@ -455,8 +456,7 @@ header .logo {
 
 @media screen and (min-width: 1158px) {
   .introduction.section {
-    width: 1440px;
-    height: 600px;
+    max-width: 1440px;
     background-image: linear-gradient(
         to bottom,
         rgba(46, 47, 66, 0.7),
@@ -470,7 +470,7 @@ header .logo {
   }
   .introduction-title {
     font-size: 56px;
-    max-width: 466px;
+    max-width: 496px;
     margin: 0 0 48px;
   }
   @media screen and (min-width: 1158px) and (min-resolution: 2dppx) {
@@ -781,6 +781,7 @@ header .logo {
 
 .thumb-text {
   display: none;
+  color: #fff;
 }
 
 .portfolio-item-content {
@@ -846,7 +847,7 @@ header .logo {
     letter-spacing: 0.02em;
     padding: 40px 32px;
     background-color: #4d5ae5;
-    color: var(--color-svg);
+    color: #fff;
     position: absolute;
     top: 0;
     left: 0;
@@ -911,6 +912,9 @@ header .logo {
 .footer-text {
   letter-spacing: 0.02em;
   text-align: start;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #f4f4fd;
 }
 
 .footer-social-title {
@@ -1049,6 +1053,9 @@ header .logo {
   .subscribe-input {
     width: 264px;
   }
+  .form-title {
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -1073,6 +1080,9 @@ header .logo {
   .subscribe-form {
     align-items: flex-end;
     gap: 24px;
+  }
+  .form-title {
+    text-align: left;
   }
 }
 
@@ -1253,6 +1263,7 @@ header .logo {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
 }
 .modal-checkbox-input:checked + .icon-checkbox-span {
   background-color: #404bbf;
